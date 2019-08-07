@@ -3,11 +3,12 @@ help:
 	@echo "🕸 SCRAPE"
 	@echo
 	@echo "crawl:        crawl airline site"
+	@echo "pic:          open screenshots"
 	@echo
 	@echo "🛠 TOOLING"
 	@echo
-	@echo "fmt:     	auto format code using Black"
-	@echo "lint:    	lint using flake8"
+	@echo "fmt:         auto format code using Black"
+	@echo "lint:        lint using flake8"
 	@echo "repl:        debug using bpython"
 	@echo
 	@echo "📦 DEPENDENCIES"
@@ -19,6 +20,12 @@ help:
 
 crawl:
 	python script.py
+
+pic:
+	open *.png
+
+qing:
+	rm *.png
 
 fmt:
 	black script.py
