@@ -25,23 +25,41 @@ destination = driver.find_element_by_css_selector('#destination-search')
 logger.debug("input origin")
 origin.send_keys('JFK')
 time.sleep(3)
-driver.get_screenshot_as_file("jfk-find.png")
+driver.get_screenshot_as_file("1.png")
 
 logger.debug("click origin")
 WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, ".tt-dataset-airports"))
     ).click()
-driver.get_screenshot_as_file("jfk-choose.png")
+driver.get_screenshot_as_file("2.png")
 
 logger.debug("input destination")
-destination.send_keys('YXU')
+destination.send_keys('YYZ')
 time.sleep(3)
-driver.get_screenshot_as_file("yxu-find.png")
+driver.get_screenshot_as_file("3.png")
 
 logger.debug("click destination")
 WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, "#destination-picker .tt-dataset-airports"))
     ).click()
-driver.get_screenshot_as_file("yxu-choose.png")
+driver.get_screenshot_as_file("4.png")
+
+logger.debug("input date")
+driver.find_element_by_css_selector('#depart').click()
+time.sleep(3)
+driver.get_screenshot_as_file("5.png")
+
+logger.debug("click date")
+WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, "div.dw-cal-slide-a [data-full='2019-7-14'"))
+    ).click()
+driver.get_screenshot_as_file("6.png")
+
+logger.debug("get flights")
+WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, "#desktop-submit input[value='Get flights']"))
+    ).click()
+time.sleep(5)
+driver.get_screenshot_as_file("7.png")
 
 logger.debug("done")
