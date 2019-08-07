@@ -23,6 +23,7 @@ origin = driver.find_element_by_css_selector('#origin-search')
 destination = driver.find_element_by_css_selector('#destination-search')
 
 logger.debug("input origin")
+driver.find_element_by_css_selector("#book-flight-form > div.col-xs-12.col-smv-6.col-lgv-12.wrapper.airport.origin > button > i").click()
 origin.send_keys('JFK')
 time.sleep(3)
 driver.get_screenshot_as_file("1.png")
@@ -34,6 +35,7 @@ WebDriverWait(driver, 10).until(
 driver.get_screenshot_as_file("2.png")
 
 logger.debug("input destination")
+driver.find_element_by_css_selector("#book-flight-form > div.col-xs-12.col-smv-6.col-lgv-12.wrapper.airport.destination > button > i").click()
 destination.send_keys('YYZ')
 time.sleep(3)
 driver.get_screenshot_as_file("3.png")
