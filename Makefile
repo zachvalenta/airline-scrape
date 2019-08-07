@@ -6,6 +6,8 @@ help:
 	@echo
 	@echo "🛠 TOOLING"
 	@echo
+	@echo "fmt:     	auto format code using Black"
+	@echo "lint:    	lint using flake8"
 	@echo "repl:        debug using bpython"
 	@echo
 	@echo "📦 DEPENDENCIES"
@@ -16,7 +18,13 @@ help:
 	@echo
 
 crawl:
-	cd airline; scrapy crawl example
+	python script.py
+
+fmt:
+	black script.py
+
+lint:
+	flake8 script.py
 
 repl:
 	bpython
