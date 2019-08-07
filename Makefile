@@ -1,5 +1,9 @@
 help:
 	@echo
+	@echo "🕸 SCRAPE"
+	@echo
+	@echo "crawl:        crawl airline site"
+	@echo
 	@echo "🛠 TOOLING"
 	@echo
 	@echo "repl:        debug using bpython"
@@ -10,6 +14,9 @@ help:
 	@echo "install:     install dependencies from requirements.txt"
 	@echo "purge:       remove any installed pkg *not* in requirements.txt"
 	@echo
+
+crawl:
+	cd airline; scrapy crawl example
 
 repl:
 	bpython
