@@ -1,5 +1,8 @@
 # macOS
 .DS_Store
 
+# bytecode
+__pycache__
+
 # virtualenv
 venv
